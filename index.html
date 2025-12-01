@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile & Registration Form</title>
+</head>
+<body>
+
+    <h1>User Registration Form</h1>
+
+    <form>
+
+        <!-- A. USER INFORMATION -->
+        <fieldset>
+            <legend>User Information</legend>
+
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone"><br><br>
+
+            <label for="birthdate">Birthdate:</label>
+            <input type="date" id="birthdate"><br><br>
+
+        </fieldset>
+
+
+        <!-- B. PREFERENCES -->
+        <fieldset>
+            <legend>Preferences</legend>
+
+            <p>Gender:</p>
+            <label><input type="radio" name="gender" value="male"> Male</label>
+            <label><input type="radio" name="gender" value="female"> Female</label>
+            <label><input type="radio" name="gender" value="other"> Other</label>
+            <br><br>
+
+            <p>Hobbies:</p>
+            <label><input type="checkbox" value="reading"> Reading</label>
+            <label><input type="checkbox" value="music"> Music</label>
+            <label><input type="checkbox" value="travel"> Travel</label>
+            <br><br>
+
+            <label for="country">Country:</label>
+            <select id="country">
+                <option>Nigeria</option>
+                <option>Ghana</option>
+                <option>Kenya</option>
+                <option>South Africa</option>
+                <option>USA</option>
+            </select>
+
+        </fieldset>
+
+
+        <!-- C. PROFILE SETUP -->
+        <fieldset>
+            <legend>Profile Setup</legend>
+
+            <label for="picture">Profile Picture:</label>
+            <input type="file" id="picture"><br><br>
+
+            <label for="bio">Bio:</label><br>
+            <textarea id="bio" rows="3"></textarea><br><br>
+
+            <label for="favnum">Favorite Number:</label>
+            <input type="number" id="favnum" min="1" max="100">
+
+        </fieldset>
+
+
+        <!-- D. BUTTONS -->
+        <br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        <button type="button">Click Me</button>
+
+    </form>
+
+</body>
+</html>
