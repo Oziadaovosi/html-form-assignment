@@ -1,4 +1,8 @@
 /* General Page Styling */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background: #f4f7fb;
@@ -11,6 +15,7 @@ h1 {
     text-align: center;
     margin-bottom: 25px;
     color: #2c3e50;
+    animation: fadeIn 1s ease-in;
 }
 
 /* Form Container */
@@ -21,6 +26,8 @@ form {
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+    animation: sideup 0.8s ease-in-out;
+    transition: width 0.3s ease, padding 0.3s ease;
 }
 
 /* Fieldsets */
@@ -52,6 +59,7 @@ input, select, textarea {
     border: 1px solid #bdc3c7;
     border-radius: 6px;
     font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:focus, select:focus, textarea:focus {
@@ -94,4 +102,32 @@ input[type="reset"]:hover,
 button:hover {
     background-color: #1d6fa5;
     transform: scale(1.05);
+}
+
+/*================ ANIMATIONS ==================*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes sideup {
+    from { transform: translateY(40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    form { width: 100%; padding: 15px; }
+    h1 { font-size: 22px; }
+    input[type="submit"], input[type="reset"], button { width: 100%; }
+}
+
+/* TABLET */
+@media (min-width: 601px) and (max-width: 1024px) {
+    form { width: 80%; }
+}
+
+/* DESKTOP */
+@media (min-width: 1025px) {
+    form { width: 60%; }
 }
